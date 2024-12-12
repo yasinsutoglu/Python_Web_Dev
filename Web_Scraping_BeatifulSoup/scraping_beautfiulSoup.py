@@ -74,7 +74,7 @@ soup = BeautifulSoup(res.text, 'html.parser') # Conversion from txt to real html
 # print(soup.find(id='score_20514755')) # <span class='score' id="score_20514755"> 159 points </span>
 
 
-res2 = requests.get('https://news.ycombinator.com/news?p=2')
+res2 = requests.get('https://news.ycombinator.com/news?p=2') # scraping for page2
 soup2 = BeautifulSoup(res2.text, 'html.parser')
 
 # select(.titleline > a) => css selector baz alarak find() işlevini yapar
