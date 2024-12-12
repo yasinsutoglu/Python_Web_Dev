@@ -13,9 +13,12 @@
 
 # Some websites open their APIs to public in JSON format, they can be used to scrape data.
 # For training, you can use https://swapi.co
+
+# USE SCRAPY framework if you want to scrape massive websites, massive amounts of data.!!!!!
+# https://scrapy.org/
 # ******************************************
-# import requests
-# from bs4 import BeautifulSoup
+# import requests # requests lib is used to download initially related html.
+# from bs4 import BeautifulSoup # It's a LIB that allows us to use the html and grab different data.
 # import pprint  # pretty print - used to print with appropriate spacing, for readability
 
 # url = 'https://news.ycombinator.com/'
@@ -56,8 +59,8 @@
 # voted_links = soup.select(".storylink").select('#vote')
 
 # ---------------------------------------------------------
-import requests # used to download initially that html.
-from bs4 import BeautifulSoup # allows us to use the html and grab different data.
+import requests
+from bs4 import BeautifulSoup
 import pprint
 
 res = requests.get('https://news.ycombinator.com/news')
