@@ -14,7 +14,18 @@
 # Some websites open their APIs to public in JSON format, they can be used to scrape data.
 # For training, you can use https://swapi.co
 # ---------------------------------------------------------
+import requests # used to download initially that html.
+from bs4 import BeautifulSoup # allows us to use the html and grab different data.
+import pprint
 
+res = requests.get('https://news.ycombinator.com/news')
+# print(res) #<Response [200]>
+print(res.text) # all contents of the html file in txt format
+soup = BeautifulSoup(res.text, 'html.parser')
+print(soup)
+
+res2 = requests.get('https://news.ycombinator.com/news?p=2')
+soup2 = BeautifulSoup(res2.text, 'html.parser')
 
 
 
